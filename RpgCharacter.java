@@ -1,4 +1,4 @@
-public class rpg_character{
+public class RpgCharacter{
   public static void main(String[] args){
     Character a = new Character("大王",100,200);
     a.introduce();
