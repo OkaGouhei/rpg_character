@@ -1,32 +1,21 @@
-class Ossan{
-  public int age;
-  public String name;
-  public Ossan(){
-    this.name = "おっさん";
-    this.age = 50;
-  }
-  public Ossan(String name,int age){
+class Character{
+  private int hp;
+  private int mp;
+  private String name;
+  public Character(String name,int hp,int mp){
     this.name = name;
-    this.age = age;
+    this.hp = hp;
+    this.mp = mp;
   }
-  public void dash(){
-    System.out.println("おっさんが走った");
-  }
-  public void speak(){
-    System.out.println("私は"+age+"歳の"+name+"というおっさんだ");
+  public void introduce(){
+    System.out.println("私は 体力"+hp+"ポイント,魔力"+mp+"ポイント,名前は"+name+"である。");
   }
 }
-public class test{
+public class rpg_character{
   public static void main(String[] args){
-    Ossan a = new Ossan("太郎",54);
-    a.dash();
-    a.speak();
-    a.age = 20;
-    a.name = "ジョニー";
-    a.dash();
-    a.speak();
-    Ossan b = new Ossan();
-    b.dash();
-    b.speak();
+    Character a = new Character("大王",100,200);
+    a.introduce();
+    Character b = new Character("魔王",300,400);
+    b.introduce();
   }
 }
