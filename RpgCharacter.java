@@ -4,5 +4,9 @@ class RpgCharacter{
     a.introduce();
     Character b = new Character("魔王",300,400);
     b.introduce();
+    b.attack(a);
+    a.introduce();
+    a.attack(b);
+    b.introduce();
   }
 }

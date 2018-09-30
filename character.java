@@ -8,6 +8,19 @@ class Character{
     this.mp = mp;
   }
   public void introduce(){
-    System.out.println("私は 体力"+hp+"ポイント,魔力"+mp+"ポイント,名前は"+name+"である。");
+    if(hp<=0){
+    System.out.println("返事がない、ただのしかばねのようだ。");
+    }else{
+    System.out.println("私は"+name+"。 体力"+hp+"ポイント,魔力"+mp+"ポイントである。");
+    }
+  }
+  private void damage(int power){
+    hp -= power;
+    System.out.println(name+"は"+power+"ポイントのダメージを受けた");
+    if(hp<=0)System.out.println(name+"は生き絶えた");
+  }
+  public void attack(Character target){
+    System.out.println(name+"の攻撃!");
+    target.damage(mp/10);
   }
 }
