@@ -18,13 +18,15 @@ class RpgCharacter{
     // party_maou[1].attack(party_daiou[1]);
     // party_daiou[1].introduce();
     Random r = new Random();
-    int num_daiou = r.nextInt(4);
-    int num_maou = r.nextInt(4);
-    party_maou[1].attack(party_daiou[num_daiou]);
-    party_daiou[num_daiou].introduce();
-    party_daiou[1].attack(party_maou[num_maou]);
-    party_maou[num_maou].introduce();
 
+    for (int i=0; i<4;i++){
+      int num_daiou = r.nextInt(4);
+      int num_maou = r.nextInt(4);
+      party_maou[i].attack(party_daiou[num_daiou]);
+      party_daiou[num_daiou].introduce();
+      party_daiou[i].attack(party_maou[num_maou]);
+      party_maou[num_maou].introduce();
+    }
     // a.attack(b);
     // b.introduce();
   }
