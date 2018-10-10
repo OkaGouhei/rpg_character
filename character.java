@@ -1,5 +1,5 @@
 class Character{
-  private int hp;
+  public int hp;
   private int mp;
   private String name;
   public Character(String name,int hp,int mp){
