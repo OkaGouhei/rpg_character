@@ -31,7 +31,7 @@ class RpgCharacter{
         party_daiou[i].attack(party_maou[num_maou]);
         party_maou[num_maou].introduce();
         if (party_maou[0].hp<=0 && party_maou[1].hp<=0 &&party_maou[2].hp <=0 &&party_maou[3].hp <=0){
-          System.out.println("大王は全滅した。");
+          System.out.println("は全滅した。");
           System.exit(0);
         }
       }
