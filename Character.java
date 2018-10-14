@@ -1,5 +1,8 @@
 class Character{
-  public int hp;
+  public int get_hp(){
+    return hp;
+  }
+  private int hp;
   private int mp;
   private String name;
   public Character(String name,int hp,int mp){
