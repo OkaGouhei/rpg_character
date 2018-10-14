@@ -19,7 +19,7 @@ class RpgCharacter{
         party_maou[i].attack(party_daiou[num_daiou]);
         int count_daiou = 0;
         for(int j =0 ;j < 4;j++ ){
-            int daiou_hp = get_hp(party_daiou[j]);
+            int daiou_hp = party_daiou[j].get_hp();
             if(daiou_hp <= 0){
                 count_daiou ++;
             }
@@ -32,7 +32,7 @@ class RpgCharacter{
         party_daiou[i].attack(party_maou[num_maou]);
         int count_maou = 0;
         for(int k =0 ;k < 4;k++ ){
-            int maou_hp = get_hp(party_maou[k]);
+            int maou_hp = party_maou[k].get_hp();
             if(maou_hp <= 0){
                 count_maou ++;
             }
