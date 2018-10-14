@@ -12,7 +12,7 @@ class RpgCharacter{
     party_maou[2] = new Character("中魔王",60,30);
     party_maou[3] = new Character("小魔王",80,20);
     Random r = new Random();
-    while(true){
+    battle:while(true){
       for (int i=0; i<4;i++){
         int num_daiou = r.nextInt(4);
         int num_maou = r.nextInt(4);
@@ -25,7 +25,7 @@ class RpgCharacter{
         }
         if (count_daiou == 4){
           System.out.println("大王は全滅した。");
-          System.exit(0);
+          break battle;
         }
         party_daiou[num_daiou].introduce();
         party_daiou[i].attack(party_maou[num_maou]);
@@ -37,7 +37,7 @@ class RpgCharacter{
         }
         if (count_maou == 4){
           System.out.println("魔王は全滅した。");
-          System.exit(0);
+          break battle;
         }
         party_maou[num_maou].introduce();
       }
