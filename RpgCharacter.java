@@ -17,13 +17,25 @@ class RpgCharacter{
         int num_daiou = r.nextInt(4);
         int num_maou = r.nextInt(4);
         party_maou[i].attack(party_daiou[num_daiou]);
-        if (party_daiou[0].hp<=0 && party_daiou[1].hp<=0 &&party_daiou[2].hp <=0 &&party_daiou[3].hp <=0){
+        int count_daiou = 0;
+        for(int j =0 ;j < 4;j++ ){
+            if(party_daiou[j].hp <= 0){
+                count_daiou ++;
+            }
+        }
+        if (count_daiou == 4){
           System.out.println("大王は全滅した。");
           System.exit(0);
         }
         party_daiou[num_daiou].introduce();
         party_daiou[i].attack(party_maou[num_maou]);
-        if (party_maou[0].hp<=0 && party_maou[1].hp<=0 &&party_maou[2].hp <=0 &&party_maou[3].hp <=0){
+        int count_maou = 0;
+        for(int k =0 ;k < 4;k++ ){
+            if(party_maou[k].hp <= 0){
+                count_maou ++;
+            }
+        }
+        if (count_maou == 4){
           System.out.println("魔王は全滅した。");
           System.exit(0);
         }
