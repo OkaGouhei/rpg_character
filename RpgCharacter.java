@@ -11,6 +11,7 @@ class RpgCharacter{
     party_maou[1] = new Character("大魔王",50,40);
     party_maou[2] = new Character("中魔王",60,30);
     party_maou[3] = new Character("小魔王",80,20);
+    Magician[] party_magic = new Magician[4];
     Random r = new Random();
     battle:while(true){
       for (int i=0; i<4;i++){
